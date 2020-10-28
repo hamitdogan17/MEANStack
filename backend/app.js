@@ -8,7 +8,7 @@ const postsRoutes = require('./routes/posts');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://hamit:hamit1234@cluster0.np8qe.mongodb.net/node-angular')
+mongoose.connect('mongodb+srv://hamit:' + process.env.MONGO_ATLAS_PW +'@cluster0.np8qe.mongodb.net/node-angular')
   .then(() => {
     console.log('Connected to database');
   })
